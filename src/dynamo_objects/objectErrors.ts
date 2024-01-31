@@ -1,13 +1,20 @@
-export class EncoderError extends Error {
+export class DynosaurusEncoderError extends Error {
     constructor(message: string) {
         super(message);
         this.name = "EncoderError";
     }
 }
 
-export class DecoderError extends Error {
+export class DynosaurusDecoderError extends Error {
     constructor(message: string) {
         super(message);
         this.name = "DecoderError";
+    }
+}
+
+export class DynosaurusTypeError extends Error {
+    constructor(message: string) {
+        super(message);
+        this.name = "DynosaurusTypeError";
     }
 }

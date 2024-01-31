@@ -1,23 +1,30 @@
 {
   "name": "dynosaurus",
-  "version": "1.0.0",
-  "description": "A simple DynamoDB ODM for Node.js",
+  "version": "0.1.0",
+  "description": "A simple customizable DynamoDB ODM for Node.js",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "lint": "tslint -c tslint.json \"src/**/*.ts\"",
+    "lint:fix": "tslint --fix -c tslint.json \"src/**/*.ts\"",
+    "test": "jest --env=node --colors --coverage test"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/jest": "^29.5.11",
     "@types/node": "^20.10.7",
+    "ts-jest": "^29.1.1",
+    "tslint": "^6.1.3",
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "@aws-sdk/client-dynamodb": "^3.485.0"
+    "@aws-sdk/client-dynamodb": "^3.485.0",
+    "@aws-sdk/lib-dynamodb": "^3.485.0"
   }
 }

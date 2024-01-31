@@ -1,5 +1,14 @@
+export {
+    DynamoDBBinary,
+    DynamoDBBinarySet,
+    DynamoDBBoolean,
+    DynamoDBNull, DynamoDBNumber,
+    DynamoDBNumberSet,
+    DynamoDBStringSet, DynamoDBString,
+    DynamoDBType
+} from "./dynamo_objects/DynamoDBTypes";
+
 export {DynamoDBObject} from "./dynamo_objects/DynamoDBObject";
 
-export {EncoderError, DecoderError} from "./dynamo_objects/objectErrors";
+export {DynosaurusEncoderError, DynosaurusDecoderError, DynosaurusTypeError} from "./dynamo_objects/objectErrors";
 
-export {DynamoMarshallerTypes} from "./dynamo_objects/mashallTypes";
