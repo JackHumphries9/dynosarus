@@ -1,4 +1,3 @@
-import {DynamoDBObject} from "../src";
 import {DynosaurusSchema} from "../src/dynamo_objects/DynamoDBSchema";
 import {
     DynamoDBBinary, DynamoDBBinarySet,

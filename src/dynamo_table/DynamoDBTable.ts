@@ -1,11 +1,5 @@
 import {DynosaurusSchema} from "../dynamo_objects/DynamoDBSchema";
-import {
-    AttributeDefinition,
-    AttributeValue,
-    GetItemCommand,
-    PutItemCommand,
-    UpdateItemCommand
-} from "@aws-sdk/client-dynamodb";
+import {GetItemCommand, PutItemCommand, UpdateItemCommand} from "@aws-sdk/client-dynamodb";
 import {DynosaurusClient} from "../dynamo_client/dynamoClient";
 
 interface IDynosaurusKey {
@@ -57,12 +51,10 @@ export class DynosaurusTable<T> {
         const partitionKeySchema = this.schema.getPartitionKey();
         const sortKeySchema = this.schema.getSortKey();
 
-        const keys = {
-            [partitionKeySchema]: { [this.schema.getKeyDynamoDBTypes(partitionKeySchema) as any]: key.partitionKey },
-            ...(key.sortKey ? { [sortKeySchema]: { [this.schema.getKeyDynamoDBTypes(key.sortKey) as any]: key.sortKey }} : {}),
-        }
-
-        return keys;
+        return {
+            [partitionKeySchema]: {[this.schema.getKeyDynamoDBTypes(partitionKeySchema) as any]: key.partitionKey},
+            ...(key.sortKey ? {[sortKeySchema]: {[this.schema.getKeyDynamoDBTypes(key.sortKey) as any]: key.sortKey}} : {}),
+        };
 
     }
 

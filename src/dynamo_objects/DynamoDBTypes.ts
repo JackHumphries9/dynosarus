@@ -1,5 +1,4 @@
 import {AttributeValue} from "@aws-sdk/client-dynamodb";
-import {DynosaurusEncoderError} from "./objectErrors";
 
 export enum DynamoDBTypes {
     STRING = 'S',
