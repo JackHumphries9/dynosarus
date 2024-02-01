@@ -72,4 +72,6 @@ Distributed under the GNU General Public License v3.0 License. See `LICENSE` for
 
 ## Contact
 
-TGWaffles 
+Jack Humphries - me@jackhumphries.io
+
+Project Link: [https://github.com/JackHumphries9/dynosaurus](https://github.com/JackHumphries9/dynosaurus)
